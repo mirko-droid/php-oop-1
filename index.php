@@ -32,16 +32,16 @@ class Film {
 // Usando il Constructor evitiamo di inserire la funzione set e duqnue possiamo inserire come attributi le nostre proprietà singole della classe per la nuova istanza
 $film1 = new Film('Shutter Island', 'Horror');
 //$film1 -> setName('Shutter Island');
-var_dump($film1->getName()); 
+/* var_dump($film1->getName());  */
 //$film1 -> setGenere('Horror');
-var_dump($film1->getGenere());
+/* var_dump($film1->getGenere()); */
 
 $film2 = new Film('Lo Hobbit', 'Fantasy');
 $film3 = new Film('Red Hot', 'Action');
 $film4 = new Film('Wonder Woman', 'Fantasy');
 $film5 = new Film('Lockdown Italia', 'Commedia');
 
-var_dump($film2, $film3, $film4, $film5);
+/* var_dump($film2, $film3, $film4, $film5); */
 // inerisco in un array così da poter usare un foreach in php e stamparli a schermo con echo
 $films = [$film1, $film2, $film3, $film4, $film5];
 
@@ -76,24 +76,20 @@ $films = [$film1, $film2, $film3, $film4, $film5];
 </style>
 <body>
     <div class="container"> 
-    <?php foreach ($films as $film) { ;?>
+        <?php foreach ($films as $film) { ;?>
 
-        <div class="film_card">
-            <p>
-                <?php echo $film->getName() ; ?>
-            </p>
-            <p>
-                <?php echo $film->getGenere() ; ?>
-            </p>
-        </div>
-
-    <?php } ; ?>
-
+            <div class="film_card">
+                <p>
+                    <?php echo $film->getName() ; ?>
+                </p>
+                <p>
+                    <?php echo $film->name ; ?>
+                </p>
+                <p>
+                    <?php echo $film->getGenere() ; ?>
+                </p>
+            </div>
+        <?php } ; ?>
     </div>
-
-    
-   
-
-    
 </body>
 </html>
